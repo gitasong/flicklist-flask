@@ -16,7 +16,7 @@ terrible_movies = [
 
 def get_current_watchlist():
     # returns user's current watchlist--hard coded for now
-    return [ "Star Wars", "Minions", "Freaky Friday", "My Favorite Martian" ]
+    return []
 
 
 @app.route("/crossoff", methods=['POST'])
@@ -54,7 +54,7 @@ def add_movie():
 
     # TODO:
     # Use a template to render the confirmation message
-    return "Confirmation Message Under Construction..."
+    return render_template("add-confirmation.html", new_movie=new_movie_escaped)
 
 # TODO:
 # Modify the edit.html file to display the watchlist in an unordered list with bullets in front of each movie.
@@ -64,7 +64,7 @@ def add_movie():
 # Change get_current_watchlist to return []. This simulates a user with an empty watchlist.
 # Modify edit.html to make sense in such a situation:
 #  First: Hide the <h2>My Watchlist</h2> and it's unordered list.
-#  Second: Hide the crossoff form, since there are no movies to cross off. 
+#  Second: Hide the crossoff form, since there are no movies to cross off.
 
 @app.route("/")
 def index():
