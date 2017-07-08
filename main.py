@@ -32,7 +32,7 @@ terrible_movies = [
 ]
 
 def get_current_watchlist():
-    # returns user's current watchlist -- a list of movies they want to see but haven't yet
+    # returns user's current watchlist -- a list of movies they want to see but haven't yet - MOST POWERFUL LINE
     return [movie.name for movie in Movie.query.all()]
 
 def get_watched_movies():
