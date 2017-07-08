@@ -1,0 +1,4 @@
+movie = Movie(new_movie_name)
+db.session.add(movie)
+db.session.commit()
+return render_template('add-confirmation.html', movie=movie)
